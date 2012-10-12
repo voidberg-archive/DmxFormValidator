@@ -38,32 +38,74 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>Demotix Android Form Validator</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This framework allows you to validate inputs of text fields and text views in a convenient way. It is a port of the <a href="https://github.com/ustwo/US2FormValidator" title="ustwo™ iOS Form Validator">ustwo™ iOS Form Validator</a>. It's developed at <a href="http://www.demotix.com/" title="Demotix.com">Demotix.com</a> by Alexandru Badiu.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>It's currently work in progress. Contributions welcome.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Know what went wrong and where</li>
+<li>Create own conditions using regular expressions for example</li>
+<li>Create own validators which contain a collection of conditions</li>
+</ul><h2>Installation</h2>
+
+<ul>
+<li>Download or clone the repository</li>
+<li>Drop the sources into your project</li>
+</ul><h2>Usage</h2>
+
+<h3>Use a built-in validator</h3>
+
+<pre><code>// Get the text that we want to validate
+String password = editPassword.getText().toString();
+
+// Create a range validator and set the range to 5 - 50 chars
+DmxValidatorRange passValidator = new DmxValidatorRange();
+
+passValidator.setRange(5, 50);
+
+// Validate the password
+DmxConditionCollection passErrors = passValidator.checkConditions(password);
+
+// Check if there are errors
+StringBuilder errors = new StringBuilder();
+if (passErrors.count() &gt; 0) {
+  errors.append("The password must be at least 5 characters.");
+}
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h3>Combining conditions</h3>
 
-<h3>Designer Templates</h3>
+<pre><code>// Get the text that we want to validate
+String email = editEmail.getText().toString();
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+// Create an empty validator
+DmxValidator emailValidator = new DmxValidator();
+// Create an email condition
+DmxConditionEmail emailCondition = new DmxConditionEmail();
+// Create a range condition to make sure the user entered something
+DmxConditionRange emptyCondition = new DmxConditionRange();
 
-<h3>Rather Drive Stick?</h3>
+// Set the range to 1 - 50 to make sure some text is entered
+emptyCondition.min = 1;
+emptyCondition.max = 50;
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+// Add the conditions to our validator
+emailValidator.addCondition(emailCondition);
+emailValidator.addCondition(emptyCondition);
 
-<h3>Authors and Contributors</h3>
+// Validate the email
+DmxConditionCollection emailErrors = emailValidator.checkConditions(email);
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+// Check if there are errors
+StringBuilder errors = new StringBuilder();
+if (passErrors.count() &gt; 0) {
+  errors.append("The email address is not correct.");
+}
+</code></pre>
       </section>
 
     </div>
