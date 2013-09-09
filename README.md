@@ -5,6 +5,8 @@ This framework allows you to validate inputs of text fields and text views in a 
 
 It's currently work in progress. Contributions welcome.
 
+Latest version is [1.1](https://github.com/voidberg/DmxFormValidator/raw/master/releases/formvalidation-1.1.jar).
+
 Features
 --------
 
