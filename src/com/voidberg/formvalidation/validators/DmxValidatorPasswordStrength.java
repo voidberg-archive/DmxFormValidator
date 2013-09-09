@@ -1,8 +1,8 @@
-package com.demotix.formvalidation.validators;
+package com.voidberg.formvalidation.validators;
 
-import com.demotix.formvalidation.conditions.DmxConditionPasswordStrength;
-import com.demotix.formvalidation.conditions.DmxPasswordStrength;
-import com.demotix.formvalidation.core.DmxValidator;
+import com.voidberg.formvalidation.conditions.DmxConditionPasswordStrength;
+import com.voidberg.formvalidation.conditions.DmxPasswordStrength;
+import com.voidberg.formvalidation.core.DmxValidator;
 
 public class DmxValidatorPasswordStrength extends DmxValidator {
   private DmxPasswordStrength _requiredStrength;

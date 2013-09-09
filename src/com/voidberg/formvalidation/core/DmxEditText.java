@@ -1,4 +1,4 @@
-package com.demotix.formvalidation.core;
+package com.voidberg.formvalidation.core;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,7 +1,7 @@
-package com.demotix.formvalidation.conditions;
+package com.voidberg.formvalidation.conditions;
 
 import android.util.Patterns;
-import com.demotix.formvalidation.core.DmxCondition;
+import com.voidberg.formvalidation.core.DmxCondition;
 
 public class DmxConditionURL extends DmxCondition {
   public boolean check(String string) {

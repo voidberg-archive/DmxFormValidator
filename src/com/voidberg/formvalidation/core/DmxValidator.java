@@ -1,6 +1,6 @@
-package com.demotix.formvalidation.core;
+package com.voidberg.formvalidation.core;
 
-import com.demotix.formvalidation.conditions.DmxConditionCollection;
+import com.voidberg.formvalidation.conditions.DmxConditionCollection;
 
 public class DmxValidator {
   DmxConditionCollection _conditionCollection;

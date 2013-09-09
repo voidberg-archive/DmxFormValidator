@@ -1,4 +1,4 @@
-package com.demotix.formvalidation.core;
+package com.voidberg.formvalidation.core;
 
 public interface DmxConditionProtocol {
   public boolean check(String string);

@@ -1,7 +1,7 @@
-package com.demotix.formvalidation.conditions;
+package com.voidberg.formvalidation.conditions;
 
-import com.demotix.formvalidation.core.DmxCondition;
-import com.demotix.formvalidation.core.DmxConditionProtocol;
+import com.voidberg.formvalidation.core.DmxCondition;
+import com.voidberg.formvalidation.core.DmxConditionProtocol;
 import java.util.ArrayList;
 import java.util.Iterator;
 

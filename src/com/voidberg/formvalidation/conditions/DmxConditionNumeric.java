@@ -1,15 +1,15 @@
-package com.demotix.formvalidation.conditions;
+package com.voidberg.formvalidation.conditions;
 
-import com.demotix.formvalidation.core.DmxCondition;
+import com.voidberg.formvalidation.core.DmxCondition;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DmxConditionAlphanumeric extends DmxCondition {
+public class DmxConditionNumeric extends DmxCondition {
   public boolean check(String string) {
     if (null == string)
       return false;
 
-    Pattern pattern = Pattern.compile("[a-zA-Z0-9]");
+    Pattern pattern = Pattern.compile("[0-9]");
     Matcher matcher = pattern.matcher(string);
 
     int count = 0;
@@ -24,7 +24,7 @@ public class DmxConditionAlphanumeric extends DmxCondition {
   }
 
   public String localizedViolationString() {
-    String key = "DmxKeyConditionViolationAlphanumeric";
+    String key = "DmxKeyConditionViolationNumeric";
 
     return null;
   }

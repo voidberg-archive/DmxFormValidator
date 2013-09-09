@@ -1,6 +1,6 @@
-package com.demotix.formvalidation.conditions;
+package com.voidberg.formvalidation.conditions;
 
-import com.demotix.formvalidation.core.DmxCondition;
+import com.voidberg.formvalidation.core.DmxCondition;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

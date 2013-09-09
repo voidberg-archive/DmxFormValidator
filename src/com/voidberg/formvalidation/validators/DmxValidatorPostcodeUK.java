@@ -1,8 +1,8 @@
-package com.demotix.formvalidation.validators;
+package com.voidberg.formvalidation.validators;
 
-import com.demotix.formvalidation.conditions.DmxConditionPostcodeUK;
-import com.demotix.formvalidation.conditions.DmxConditionRange;
-import com.demotix.formvalidation.core.DmxValidator;
+import com.voidberg.formvalidation.conditions.DmxConditionPostcodeUK;
+import com.voidberg.formvalidation.conditions.DmxConditionRange;
+import com.voidberg.formvalidation.core.DmxValidator;
 
 public class DmxValidatorPostcodeUK extends DmxValidator {
   public DmxValidatorPostcodeUK() {

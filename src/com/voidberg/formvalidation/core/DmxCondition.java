@@ -1,4 +1,4 @@
-package com.demotix.formvalidation.core;
+package com.voidberg.formvalidation.core;
 
 public class DmxCondition implements DmxConditionProtocol {
   private boolean _shouldAllowViolation;

@@ -1,4 +1,4 @@
-package com.demotix.formvalidation.conditions;
+package com.voidberg.formvalidation.conditions;
 
 public enum DmxPasswordStrength {
   DmxPasswordStrengthVeryWeak,
