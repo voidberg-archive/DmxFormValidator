@@ -17,8 +17,8 @@ Features
 Installation
 ------------
 
-* Download or clone the repository
-* Drop the sources into your project
+* Download the latest release and add the jar to your project.
+* Or drop the sources into your project.
 
 Usage
 -----
